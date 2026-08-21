@@ -43,6 +43,7 @@ pipeline {
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'AWS-Cred']]) {
                     withKubeConfig([credentialsId: 'kubeconfig-creds']) {
                         sh "kubectl apply -f k8s/namespace.yaml"
+                        sh "kubectl apply -f k8s/deployment.yaml"
                         sh "kubectl set image deployment/zomato-api zomato-api=${IMAGE_NAME}:${IMAGE_TAG} -n zomato"
                         sh "kubectl apply -f k8s/service.yaml"
                     }
