@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zomato-api
+  namespace: zomato
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: zomato-api
+  template:
+    metadata:
+      labels:
+        app: zomato-api
+    spec:
+      containers:
+        - name: zomato-api
+          image: ikramapzz55/zomato-api:latest
+          ports:
+            - containerPort: 3005
+          env:
+            - name: PORT
+              value: "3005"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3005
+            initialDelaySeconds: 10
+            periodSeconds: 15
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3005
+            initialDelaySeconds: 5
+            periodSeconds: 10
