@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3005;
 
 // Mock data
 const restaurants = [
-  { id: 1, name: "White Horse Family Restaurant", cuisine: ["North-indian", "South-indian", "chinese]", rating: 4.3 },
+  { id: 1, name: "White Horse Family Restaurant", cuisine: ["North-indian", "South-indian", "chinese"], rating: 4.3 },
   { id: 2, name: "RAW06", cuisine: ["North-indian", "South-indian", "chinese"], rating: 4.5 },
   { id: 3, name: "Domino's Pizza", cuisine: "Fast Food", rating: 4.1 }
 ];
