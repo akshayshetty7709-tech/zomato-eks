@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')
-        IMAGE_NAME = 'ikramapzz55/zomato-api'
+        DOCKERHUB_CREDENTIALS = credentials('Dockerhubcred')
+        IMAGE_NAME = 'akshaykumarshetty/zomato-api'
         IMAGE_TAG = "${env.BUILD_NUMBER}"
     }
 
@@ -40,7 +40,7 @@ pipeline {
 
         stage('Deploy to EKS') {
             steps {
-                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-eks-creds']]) {
+                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'AWS-Cred']]) {
                     withKubeConfig([credentialsId: 'kubeconfig-creds']) {
                         sh "kubectl apply -f k8s/namespace.yaml"
                         sh "kubectl set image deployment/zomato-api zomato-api=${IMAGE_NAME}:${IMAGE_TAG} -n zomato"

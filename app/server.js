@@ -11,15 +11,15 @@ const PORT = process.env.PORT || 3005;
 
 // Mock data
 const restaurants = [
-  { id: 1, name: "Sangeetha Veg Restaurant", cuisine: "South Indian", rating: 4.3 },
-  { id: 2, name: "Anjappar Chettinad", cuisine: "Chettinad", rating: 4.5 },
+  { id: 1, name: "White Horse Family Restaurant", cuisine: "North-indian", "South-indian", "chinese", rating: 4.3 },
+  { id: 2, name: "RAW06", cuisine: "North-indian", "South-indian", "chinese", rating: 4.5 },
   { id: 3, name: "Domino's Pizza", cuisine: "Fast Food", rating: 4.1 }
 ];
 
 const menus = {
-  1: [{ item: "Masala Dosa", price: 90 }, { item: "Idli Sambar", price: 60 }],
-  2: [{ item: "Chicken Chettinad", price: 320 }, { item: "Mutton Biryani", price: 280 }],
-  3: [{ item: "Margherita Pizza", price: 249 }, { item: "Farmhouse Pizza", price: 399 }]
+  1: [{ item: "Chicken kasturi", price: 250 }, { item: "Chicken Fried Rice", price: 180 }],[{ item: "Chicken Biryani", price:220 }, { item: "Ghee Rice", price:160 }],
+  2: [{ item: "Chicken kasturi", price: 250 }, { item: "Chicken Fried Rice", price: 180 }],[{ item: "Chicken Biryani", price:220 }, { item: "Ghee Rice", price:160 }],
+  3: [{ item: "Margherita Pizza", price: 249 }, { item: "Farmhouse Pizza", price: 399 }],[{ item: "Paneer Pizza", price: 249 }, { item: "Chicken maxx Pizza", price: 399 }]
 };
 
 const DELIVERY_FEE = 25;
