@@ -17,9 +17,24 @@ const restaurants = [
 ];
 
 const menus = {
-  1: [{ item: "Chicken kasturi", price: 250 }, { item: "Chicken Fried Rice", price: 180 }],[{ item: "Chicken Biryani", price:220 }, { item: "Ghee Rice", price:160 }],
-  2: [{ item: "Chicken kasturi", price: 250 }, { item: "Chicken Fried Rice", price: 180 }],[{ item: "Chicken Biryani", price:220 }, { item: "Ghee Rice", price:160 }],
-  3: [{ item: "Margherita Pizza", price: 249 }, { item: "Farmhouse Pizza", price: 399 }],[{ item: "Paneer Pizza", price: 249 }, { item: "Chicken maxx Pizza", price: 399 }]
+  1: [
+  { item: "Chicken kasturi", price: 250 },
+  { item: "Chicken Fried Rice", price: 180 },
+  { item: "Chicken Biryani", price: 200 },
+  { item: "Ghee Rice", price: 160 }
+],
+  2: [
+  { item: "Chicken kasturi", price: 280 },
+  { item: "Chicken Fried Rice", price: 220 },
+  { item: "Chicken Biryani", price: 250 },
+  { item: "Ghee Rice", price: 180 }
+],
+  3: [
+  { item: "Margherita Pizza", price: 249 },
+  { item: "Farmhouse Pizza", price: 399 },
+  { item: "Peppy Paneer pizza", price: 289 },
+  { item: "Chicken maxx Pizza", price: 349 }
+],
 };
 
 const DELIVERY_FEE = 25;
